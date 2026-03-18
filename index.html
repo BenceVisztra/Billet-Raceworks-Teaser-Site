@@ -6,6 +6,12 @@
 <title>Billet Raceworks</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
+@font-face {
+    font-family: 'BilletFont';
+    src: url('ChakraPetch-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
 *{box-sizing:border-box;margin:0;padding:0}
 body{
 font-family:'Inter',sans-serif;
@@ -24,12 +30,61 @@ max-width:1200px;
 padding:40px;
 text-align:center;
 }
+
+
+
 .logo{
-font-size:46px;
+font-family: 'BilletFont', sans-serif;
+font-size:72px;
 font-weight:700;
-letter-spacing:4px;
+letter-spacing:0.5px;
 margin-bottom:8px;
+text-transform:none;
+transform:skewX(-14deg);
+display:inline-block;
+position:relative;
+background:linear-gradient(90deg,#ffffff,#cfcfcf,#ffffff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
+
+
+
+.logo span.trail{
+display:flex;
+gap:8px;
+margin-left:12px;
+transform:translateY(-295%) translateX(104%) skewX(-11deg) scaleY(300%);
+
+}
+
+/* Five vertical bars, same height, increasing width */
+.logo span.trail div{
+
+height:18px;
+border-radius:2px;
+background:linear-gradient(180deg,#00ff9d,#00b7ff);
+opacity:0.9;
+width:3px;
+background:linear-gradient(180deg,white,white);
+opacity:0.6;
+border-radius:2px;
+margin-top:4px;
+
+}
+
+.logo span.trail div:nth-child(1){ width:8px; opacity:1; }
+.logo span.trail div:nth-child(2){ width:12px; opacity:1; }
+.logo span.trail div:nth-child(3){ width:17px; opacity:1; }
+.logo span.trail div:nth-child(4){ width:23px; opacity:1; }
+.logo span.trail div:nth-child(5){ width:30px; opacity:1; }
+
+
+
+
+
+
+
 .tagline{
 font-size:18px;
 color:#b5b5b5;
@@ -45,7 +100,7 @@ margin-bottom:50px;
 transition:transform 0.6s ease;
 }
 .board-image:hover{
-transform:scale(1.02);
+transform:scale(1.05);
 }
 .coming{
 font-size:48px;
@@ -89,13 +144,20 @@ margin:50px 0;
 <body>
 
 <div class="container">
-
-<div class="logo">BILLET RACEWORKS</div>
-<div class="tagline">Precision Machined Performance</div>
+<div class="logo-wrap">
+<div class="logo" data-text="Billet Raceworks">Billet Raceworks<span class="trail">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</span></div>
+</div>
+<div class="tagline"></div>
 
 <img src="board_render.jpg" class="board-image" alt="Electric Racing Skateboard">
 
-<div class="coming">COMING THIS SPRING</div>
+<div class="coming">COMING SOON</div>
 
 <p class="desc">
 A new category of electric racing machines is right around the corner. Billet Raceworks is developing a high‑performance electric raceboard engineered around real racing tires from karting, custom precision billet aluminium components, and motorsport‑grade engineering. Built for extreme cornering, stability, and best in class power.
@@ -137,13 +199,13 @@ A new category of electric racing machines is right around the corner. Billet Ra
 </div>
 
 <p class="desc">
-Developed by Bence Visztra — professional racer and engineer with frequent race podiums validating the board’s design philosophy.
+Developed by Bence Visztra — professional racer and engineer with multiple racing podiums validating the board’s performance‑driven design philosophy.
 </p>
 
 <div class="divider"></div>
 
 <div class="footer">
-© 2026 Billet Raceworks — Built by riders for riders
+© 2026 Billet Raceworks — By riders, for riders
 </div>
 
 </div>
